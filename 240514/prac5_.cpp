@@ -6,11 +6,12 @@ using namespace std;
 
 class Snack
 {
-public:
+protected:
 	int price;
 	string pName;
 	string mCompany;
 
+public:
 	virtual string getFeature() = 0;
 
 	int getprice() {
@@ -29,9 +30,10 @@ public:
 
 class Candy : public Snack 
 {
-public:
+private:
 	string taste;
 
+public:
 	Candy(string t, int p, string n, string c) {
 
 		this->taste = t;
@@ -48,9 +50,10 @@ public:
 
 class Chocolate : public Snack
 {
-public:
+private:
 	string shape;
 
+public:
 	Chocolate(string s, int p, string n, string c) {
 
 		this->shape = s;
