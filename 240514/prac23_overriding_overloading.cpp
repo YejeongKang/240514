@@ -71,6 +71,11 @@ public:
 		cout << "삼각형의 넓이는 " << area << endl << endl;
 	}
 
+	void printInfo() { // 오버로딩
+
+		cout << "오버로딩 실패~" << endl << endl;
+	}
+
 	void printInfo(float b, float h) { // 오버로딩
 
 		cout << "삼각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl
