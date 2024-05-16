@@ -24,7 +24,7 @@
     <ClCompile Include="prac1_class_inheritance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prac2_overriding.cpp">
+    <ClCompile Include="prac2_overriding_overloading.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

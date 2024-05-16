@@ -43,7 +43,7 @@ public:
 		cout << "사각형의 넓이는 " << area << endl << endl;
 	}
 
-	void printInfo() {
+	void printInfo() { // 오버라이딩
 
 		cout << "사각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl
 	   		 << "사각형의 넓이는 " << base * length << endl << endl;
@@ -71,10 +71,10 @@ public:
 		cout << "삼각형의 넓이는 " << area << endl << endl;
 	}
 
-	void printInfo() {
+	void printInfo(float b, float h) { // 오버로딩
 
 		cout << "삼각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl
-			<< "삼각형의 넓이는 " << base * height / 2 << endl << endl;
+			<< "삼각형의 넓이는 " << b * h / 2 << endl << endl;
 	}
 };
 
@@ -83,7 +83,7 @@ int main() {
 	// 사각형
 	Rectangle rect(3, 3);
 
-	rect.printInfo();
+	rect.printInfo(); // 오버라이딩
 
 	rect.Shape::printInfo(); // 넓이 X
 
@@ -92,7 +92,7 @@ int main() {
 	// 삼각형
 	Triangle tria(7, 3);
 
-	tria.printInfo();
+	tria.printInfo(7, 3); // 오버로딩
 
 	tria.Shape::printInfo();// 넓이 X
 
