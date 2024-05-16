@@ -20,10 +20,6 @@ public:
 			cout << "사각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl;
 		}
 	}
-
-	virtual void Func()
-	{
-	}
 };
 
 class Rectangle: public Shape
@@ -38,12 +34,6 @@ public:
 		this->length = l;
 
 	} // 사각형은 pointNum이 4
-
-	void Func() override
-	{
-		pointNum;
-		base;
-	}
 
 	void area() {
 
@@ -65,12 +55,6 @@ public:
 		this->height = h;
 
 	} // 삼각형은 pointNum이 3
-
-	void Func() override
-	{
-		pointNum;
-		base;
-	}
 
 	void area() {
 
