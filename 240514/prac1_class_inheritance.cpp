@@ -9,7 +9,7 @@ public:
 	int pointNum; // 변의 개수
 	float base; // 밑변의 길이
 	
-	Shape(int p, float b) : pointNum(p), base(b) {} // 생성자
+	//Shape() {} // 생성자
 
 	void printInfo() {
 
@@ -31,7 +31,13 @@ class Rectangle: public Shape
 public:
 	float length; // 세로 길이
 
-	Rectangle(float b, float l) : Shape(4, b), length(l) {} // 사각형은 pointNum이 4
+	Rectangle(float b, float l) {
+
+		this->pointNum = 3;
+		this->base = b;
+		this->length = l;
+
+	} // 사각형은 pointNum이 4
 
 	void Func() override
 	{
@@ -52,7 +58,13 @@ class Triangle : public Shape
 public:
 	float height; // 높이
 	
-	Triangle(float b, float h) : Shape(3, b), height(h) {} // 삼각형은 pointNum이 3
+	Triangle(float b, float h) {
+	
+		this->pointNum = 3;
+		this->base = b;
+		this->height = h;
+
+	} // 삼각형은 pointNum이 3
 
 	void Func() override
 	{
