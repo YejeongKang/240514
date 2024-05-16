@@ -27,7 +27,7 @@ class Rectangle: public Shape
 public:
 	float length; // 세로 길이
 
-	Rectangle(int p, float b, float l) : Shape(p, b), length(l) {}
+	Rectangle(float b, float l) : Shape(4, b), length(l) {} // 사각형은 pointNum이 4
 
 	void Func() override
 	{
@@ -48,7 +48,7 @@ class Triangle : public Shape
 public:
 	float height; // 높이
 	
-	Triangle(int p, float b, float h) : Shape(p, b), height(h) {} // 생성자
+	Triangle(float b, float h) : Shape(3, b), height(h) {} // 삼각형은 pointNum이 3
 
 	void Func() override
 	{
@@ -66,9 +66,9 @@ public:
 
 int main() {
 	
-	Rectangle rect(4, 3, 3);
+	Rectangle rect(3, 3);
 
-	Triangle tria(3, 4, 3);
+	Triangle tria(7, 3);
 
 	rect.area(); // 9 출력
 
