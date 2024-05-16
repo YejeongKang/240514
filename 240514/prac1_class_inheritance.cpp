@@ -33,7 +33,7 @@ public:
 
 	Rectangle(float b, float l) {
 
-		this->pointNum = 3;
+		this->pointNum = 4;
 		this->base = b;
 		this->length = l;
 
@@ -94,7 +94,7 @@ int main() {
 
 	tria.printInfo();
 
-	tria.area(); // 6 출력
+	tria.area(); // 10.5 출력
 
 	return 0;
 }

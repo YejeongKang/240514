@@ -14,10 +14,10 @@ public:
 	void printInfo() {
 
 		if (pointNum == 3) {
-			cout << "삼각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl;
+			cout << "삼각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl << endl;
 		}
 		else {
-			cout << "사각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl;
+			cout << "사각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl << endl;
 		}
 	}
 
@@ -30,7 +30,7 @@ public:
 
 	Rectangle(float b, float l) {
 
-		this->pointNum = 3;
+		this->pointNum = 4;
 		this->base = b;
 		this->length = l;
 
@@ -46,7 +46,7 @@ public:
 	void printInfo() {
 
 		cout << "사각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl
-	   		 << "사각형의 넓이는 " << base * length << endl;	
+	   		 << "사각형의 넓이는 " << base * length << endl << endl;
 	}
 };
 
@@ -74,7 +74,7 @@ public:
 	void printInfo() {
 
 		cout << "삼각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl
-			<< "삼각형의 넓이는 " << base * height / 2 << endl;
+			<< "삼각형의 넓이는 " << base * height / 2 << endl << endl;
 	}
 };
 
@@ -85,12 +85,16 @@ int main() {
 
 	rect.printInfo();
 
+	rect.Shape::printInfo(); // 넓이 X
+
 	//rect.area(); // 9 출력
 
 	// 삼각형
 	Triangle tria(7, 3);
 
 	tria.printInfo();
+
+	tria.Shape::printInfo();// 넓이 X
 
 	//tria.area(); // 10.5 출력
 
