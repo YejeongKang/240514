@@ -13,7 +13,12 @@ public:
 
 	void printInfo() {
 
-		cout << "변의 개수는 " << pointNum << ", \n밑변의 길이는 " << base << endl;
+		if (pointNum == 3) {
+			cout << "삼각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl;
+		}
+		else {
+			cout << "사각형의 변의 개수는 " << pointNum << ", 밑변의 길이는 " << base << endl;
+		}
 	}
 
 	virtual void Func()
@@ -21,7 +26,6 @@ public:
 	}
 };
 
-// class 클래스명 : 상속 접근 지정자 부모클래스명
 class Rectangle: public Shape
 {	
 public:
@@ -39,7 +43,7 @@ public:
 
 		float area = base * length;
 
-		cout << "사각형의 넓이는 " << area << endl;
+		cout << "사각형의 넓이는 " << area << endl << endl;
 	}
 };
 
@@ -60,17 +64,23 @@ public:
 
 		float area = base * height / 2;
 
-		cout << "삼각형의 넓이는 " << area << endl;
+		cout << "삼각형의 넓이는 " << area << endl << endl;
 	}
 };
 
 int main() {
 	
+	// 사각형
 	Rectangle rect(3, 3);
-
-	Triangle tria(7, 3);
+	
+	rect.printInfo();
 
 	rect.area(); // 9 출력
+
+	// 삼각형
+	Triangle tria(7, 3);
+
+	tria.printInfo();
 
 	tria.area(); // 6 출력
 
